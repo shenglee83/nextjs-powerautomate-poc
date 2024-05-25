@@ -23,8 +23,10 @@ const nric = (e: React.FormEvent<HTMLInputElement>) => {
 
 const numberOnly = (e: React.FormEvent<HTMLInputElement>) => {
   const value = e.currentTarget.value;
-  
+  e.currentTarget.value = value
+  .replace(/[^\d]/g, '');
+
   return e.currentTarget.value;
 }
 
-export default {alphabetOnly, nric};
+export default {alphabetOnly, nric, numberOnly};

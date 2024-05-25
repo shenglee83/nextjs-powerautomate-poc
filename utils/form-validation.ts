@@ -28,3 +28,5 @@ const rules = {
     required
   },
 };
+
+export default rules;
